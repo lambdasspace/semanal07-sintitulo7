@@ -1,0 +1,69 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+
+%----- Configuración del estilo del documento------%
+\usepackage{epsfig,graphicx}
+\usepackage[left=2cm,right=2cm,top=1.8cm,bottom=2.3cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\usepackage{xcolor}
+\usepackage{soul}
+\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}
+
+%------ Paquetes para demostraciónes y árboles de derivación ------%
+\usepackage{bussproofs}
+\usepackage{scalefnt}
+
+%Color bibi
+\definecolor{bibi}{RGB}{0,103,148}
+% Otros colores
+
+% ------ Paquetes para arboles --------%
+\usepackage{bussproofs}
+
+\usepackage{cite}
+\usepackage{multicol}
+\setlength{\columnsep}{1.5cm}
+\setlength{\columnseprule}{.5pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\textit{Página \thepage \hspace{1pt} de \pageref{LastPage}}}
+
+%------ Paquetes matemáticos básicos --------%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+%------ Paquetes para codigo --------%
+\usepackage{verbatim}
+
+\begin{document}
+%------ Encabezado -------- %
+\input{src/Encabezado/encabezado}
+\rule{17cm}{0.1mm}
+
+
+%------ Ejercicios -------- %
+\begin{center}
+    \textbf{Evaluar las siguientes expresiones usando a) sustitución, b) ambientes con alcance dinámico y c) ambientes con alcance estático. Es necesario que muestren el ambiente de evaluación final en forma de pila en los casos que corresponda. Para el inciso c) además deberán indicar la cerradura de cada función.}\vspace{.2cm}
+    
+    \textbf{Nota: }En esta ocasión no será necesario que muestren la sintaxis abstracta de las expresiones
+\end{center}
+\begin{enumerate}
+    \item \input{src/Ejercicios/ej1/1}
+    \begin{enumerate}
+        \item \input{src/Ejercicios/ej1/1.1}
+        \item \input{src/Ejercicios/ej1/1.2}
+        \item \input{src/Ejercicios/ej1/1.3}
+    \end{enumerate}
+    \item \input{src/Ejercicios/ej2/2}
+    \begin{enumerate}
+        \item \input{src/Ejercicios/ej2/2.1}
+        \item \input{src/Ejercicios/ej2/2.2}
+        \item \input{src/Ejercicios/ej2/2.3}
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}

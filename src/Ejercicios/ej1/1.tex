@@ -1,0 +1,10 @@
+\begin{verbatim}
+    (let (a 2)
+        (let (b 3)
+            (let (foo (lambda (x) (- (+ a b) x)))
+                (let (a -2)
+                    (let (b -3)
+                        (let (foo (lambda (x) (+ (- a b) x)))
+                            (foo - 10)))))))
+\end{verbatim}
+

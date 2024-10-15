@@ -1,0 +1,29 @@
+Sustituimos y resolvemos para $a$ y $b$:
+\begin{verbatim}
+    (let (foo (lambda (x) (- 5 x)))
+        (let (a -2)
+            (let (b -3)
+                (let (foo (lambda (x) (+ (- a b) x)))
+                    (foo - 10)))))
+\end{verbatim}
+
+Nuevamente sustituimos y resolvemos $(a -2)$ y $(b -3)$ para el siguiente foo:\\
+\begin{verbatim}
+    (let (foo (lambda (x) (+ (- (-2) (-3) x)))
+                    (foo - 10))
+\end{verbatim}
+Evaluamos:
+\begin{verbatim}
+    (let (foo (lambda (x) (+ 1 x)))
+                    (foo - 10))
+\end{verbatim}
+El primer $foo$ queda reescrito por el segundo, por lo que lo sustituímos en la expresión final:
+\begin{verbatim}
+    ((lambda (x) (+ 1 x)) -10)
+\end{verbatim}
+Evaluamos:
+\begin{verbatim}
+    (+ 1 -10)
+    (-9)
+\end{verbatim}
+El resultado final es igual a -9.
