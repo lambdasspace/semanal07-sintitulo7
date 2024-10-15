@@ -1,4 +1,7 @@
+Evaluar la siguiente expresión en Racket.
+
 \begin{verbatim}
-    (let (foo (lambda (x) (+ x (foo (- x 1)))))
-        (foo 10))
+    > (define c #f)
+    > (+ 1 (+ 2 (+ 3 (+ (let/cc k (set! c k) 4) 5))))
+    > (c 10)
 \end{verbatim}
