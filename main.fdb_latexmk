@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1729034737 "/home/jsr_mario/Documents/Escuela/Semestre_5/Lenguajes/Semanales/semanal07-sintitulo7/main.tex" "main.pdf" "main" 1729034738 0
+["pdflatex"] 1729035256 "/home/jsr_mario/Documents/Escuela/Semestre_5/Lenguajes/Semanales/semanal07-sintitulo7/main.tex" "main.pdf" "main" 1729035257 0
   "/etc/texmf/web2c/texmf.cnf" 1725292753 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/jsr_mario/Documents/Escuela/Semestre_5/Lenguajes/Semanales/semanal07-sintitulo7/main.tex" 1729034313 1778 aa3d1d4544917220d0f03e394a88809c ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -73,7 +73,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1681034085 39561 34c98e380bf7c7201ee6a7909aff625a ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1725292770 4623455 fa0568a71dd9a288d6c226ee477506c6 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1725292831 7882642 d604e976abf4089c053e6d6ecd7b8688 ""
-  "main.aux" 1729034738 114 9cc71f9e8b170749f2b4e9ffdfa8362a "pdflatex"
+  "main.aux" 1729035257 114 9cc71f9e8b170749f2b4e9ffdfa8362a "pdflatex"
   "main.tex" 1729034313 1778 aa3d1d4544917220d0f03e394a88809c ""
   "src/Ejercicios/ej1/1.1.tex" 1729034413 35 fcd0941286c22e5cbd5aa97a3a91abc4 ""
   "src/Ejercicios/ej1/1.2.tex" 1729034422 94 3bc798fc2e3fe6e6a953a3157fbd3e9a ""
@@ -86,7 +86,7 @@
   "src/Ejercicios/ej3/3.3.tex" 1729034704 121 e4a48c141f6c4a53a27b43eabdf2fb2f ""
   "src/Ejercicios/ej3/3.4.tex" 1729034737 93 02fddb87055e1dac8be1610143b510a5 ""
   "src/Ejercicios/ej3/3.tex" 1729034597 46 100da04ef85d394ac82f1101e5bf59c2 ""
-  "src/Encabezado/encabezado.tex" 1729033728 851 2a692b0485356bbf5e8486e59185b2b3 ""
+  "src/Encabezado/encabezado.tex" 1729035256 880 32bb0d9a3e56651b9b952e2ccd655792 ""
   "src/Img/Logo_FC.png" 1729033728 624736 9f1de437b11dbb3af694275361eb0028 ""
   "src/Img/Logo_UNAM.png" 1729033728 284641 bd0670d95026b4d8545a74884b2e7ecb ""
   (generated)
