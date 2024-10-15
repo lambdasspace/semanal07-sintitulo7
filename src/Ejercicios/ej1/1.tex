@@ -1,10 +1,6 @@
+Dada la siguiente expresión en MiniLisp: 
 \begin{verbatim}
-    (let (a 2)
-        (let (b 3)
-            (let (foo (lambda (x) (- (+ a b) x)))
-                (let (a -2)
-                    (let (b -3)
-                        (let (foo (lambda (x) (+ (- a b) x)))
-                            (foo - 10)))))))
+    (let (sum (lambda (n) (if0 n 0 (+ n (sum (- n 1))))))
+        (sum 5))
 \end{verbatim}
 

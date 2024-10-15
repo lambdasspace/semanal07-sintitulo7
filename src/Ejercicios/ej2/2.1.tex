@@ -1,15 +1,1 @@
-\textbf{Sustitución}\\
-        \\
-        Realzaremos la evaluación de la expresión:\\
-        \\
-        \texttt{[foo:(lambda (x) (+ x (foo (- x 1))))]} :\\
-        \begin{verbatim}
-            (lambda (x) (+ x (foo (- x 1))))(10)
-        \end{verbatim}
-        
-        $$x:10$$:
-        \begin{verbatim}
-            (+ 10 (foo (- 10 1))) -> (+ 10 (foo (9)))
-        \end{verbatim}
-        Aquí veremos que esto generará una recursión infinita y al no haber caso base no se podrá detener, por ende es un error.
-        
+Explicar su resultado:
