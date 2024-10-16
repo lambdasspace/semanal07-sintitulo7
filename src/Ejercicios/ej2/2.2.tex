@@ -1,1 +1,15 @@
-Dar la continuación asociada a evaluar usando la notación $\lambda \uparrow$.
+\textbf{Dar la continuación asociada a evaluar usando la notación} \(\lambda^\uparrow\):
+
+Para esto, primero tenemos que saber qué se encuentra antes y qué después del punto en donde se encuentra la continuación. En la expresión:
+
+\begin{verbatim}
+    > (+ 1 (+ 2 (+ 3 (+ <CONTINUACIÓN> 5))))
+\end{verbatim}
+
+Se evalúa \((+1 (+2 (+3 \, <\text{CONTINUACIÓN}>)))\) antes de que la continuación tome un valor específico, y después se evalúa la parte que queda sumando \(5\). 
+
+Por lo tanto, la continuación queda definida como:
+
+\[
+\lambda^\uparrow (v) \, . \, (+ 1 (+ 2 (+ 3 (+ v \, 5))))
+\]
