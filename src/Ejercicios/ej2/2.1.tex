@@ -1,1 +1,25 @@
-Explicar su resultado:
+\textbf{Explicación del resultado:}
+
+En este código en particular se tienen \textbf{dos resultados} debido a la continuación que se presenta, como se explica a continuación: 
+
+Vemos que la continuación se encuentra en:
+
+\[
+(\texttt{let/cc} \, k \, (\texttt{set!} \, c \, k) \, 4)
+\]
+
+Aquí, el código continuará con su ejecución con \(c = 4\), es decir:
+
+\begin{verbatim}
+    > (+ 1 (+ 2 (+ 3 (+ 4 5))))
+\end{verbatim}
+
+Lo cual da como resultado \(15\).
+
+Ahora continuamos y nos encontramos con \((c \, 10)\). En este punto vamos a sustituir \(c\) en el punto donde está la continuación con \(10\) y evaluamos, es decir:
+
+\begin{verbatim}
+    > (+ 1 (+ 2 (+ 3 (+ 10 5))))
+\end{verbatim}
+
+Lo cual es igual a \(21\). Estos serían los dos resultados de la evaluación después de su ejecución.
