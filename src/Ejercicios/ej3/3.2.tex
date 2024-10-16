@@ -1,3 +1,39 @@
 Mostrar los registros de activación generados por la 
 función definida en el ejercicio anterior con la llamada 
 ocurrenciasElementos [1,2,3] [1,2].
+
+Ahora mismo nuestras llamadas dejan pendiente el 'cons' 
+de la lista de salida, por lo que el registro de activación
+se queda pendiente de completa, lo mismo pasa para la llamada
+de la función cuentaElemento, por el mas, asi es que la pila,
+se veria algo como:
+\begin{verbatim}
+    ocurrenciasElementos [1,2,3] [1,2]
+    (1, cuentaElemento 1 [1,2,3]) : ocurrenciasElementos [1,2,3] [2]
+    cuentaElemento 1 [1,2,3] = 1 + cuentaElemento 1 [2,3]
+    cuentaElemento 1 [2,3] = 0 + cuentaElemento 1 [3]
+    cuentaElemento 1 [3] = 0 + cuentaElemento 1 []
+    cuentaElemento 1 [] = 0
+
+    (1, 1) : ocurrenciasElementos [1,2,3] [2]
+    (1, 1) : (2, cuentaElemento 2 [1,2,3]) : ocurrenciasElementos [1,2,3] []
+    cuentaElemento 2 [1,2,3] = 0 + cuentaElemento 2 [2,3]
+    cuentaElemento 2 [2,3] = 1 + cuentaElemento 2 [3]
+    cuentaElemento 2 [3] = 0 + cuentaElemento 2 []
+    cuentaElemento 2 [] = 0
+
+    (1, 1) : ocurrenciasElementos [1,2,3] [2]
+    (1, 1) : (2, 1) : ocurrenciasElementos [1,2,3] []
+    (1, 1) : (2, 1) : []
+    [(1, 1), (2, 1)]
+\end{verbatim}
+
+Lo escribi de una manera que se entendiera que esta pasando 
+pero en realidad se mete a la pila solo la función,
+entonces el problema es que la pila tiene que llamar a la función
+cuentaElemento, para ir contando y tambien la función ocurrenciasElementos
+para ir gurdando los resultados, entonces la pila se va llenando de
+llamadas pendientes, hasta que se llega a la base de la recursión y se
+comienza a desapilar, para completar las llamadas pendientes.
+
+\vspace{.3cm}

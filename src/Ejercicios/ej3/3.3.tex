@@ -1,2 +1,38 @@
 Optimizar la función definida usando recursión de cola. 
 Deben transformar todas las funciones auxiliares que utilicen.
+
+\begin{verbatim}
+    -- Funcion que usa recursion de cola
+    cuentaElemento2 :: Int -> [Int] -> Int
+    cuentaElemento2 n xs = cuentaElemento' n xs 0
+        where
+            cuentaElemento' :: Int -> [Int] -> Int -> Int
+            cuentaElemento' _ [] acc = acc
+            cuentaElemento' n [x] acc
+                | n == x    = acc + 1
+                | otherwise = acc
+            cuentaElemento' n (x:xs) acc
+                | n == x    = cuentaElemento' n xs (acc + 1)
+                | otherwise = cuentaElemento' n xs acc 
+
+    ocurrenciasElementos2 :: [Int] -> [Int] -> [(Int, Int)]
+    ocurrenciasElementos2 xs ys = ocurrenciasElementos' xs ys []
+        where
+            ocurrenciasElementos' :: [Int] -> [Int] -> 
+                    [(Int, Int)] -> [(Int, Int)]
+                        
+            ocurrenciasElementos' _ [] acc = acc
+
+            ocurrenciasElementos' xs (y:ys) acc = ocurrenciasElementos' xs ys 
+                                        (acc ++ [(y, cuentaElemento2 y xs)])
+\end{verbatim}
+
+Disculpen por la manera de escribirlo pero era para que cupiera,
+la idea es que la función cuentaElemento2 es la versión de la
+función cuentaElemento que usa recursión de cola, y la función
+ocurrenciasElementos2 es la versión de la función ocurrenciasElementos
+que usa recursión de cola. La funcionalidad de ambas es la misma pero
+se va a mantener un solo registro en la pila de llamadas, y se va a 
+usar una lista o un int para acumular los resultados.
+
+\vspace{.3cm}
