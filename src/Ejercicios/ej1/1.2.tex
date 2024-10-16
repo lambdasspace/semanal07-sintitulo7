@@ -1,1 +1,37 @@
-Modificarla usando el combinador de punto fijo Y, volver a ejecutarla y explicar el resultado.
+Modificarla usando el combinador de punto fijo Y, volver a ejecutarla y explicar el resultado.\\
+El combinador de punto fijo se puede reescribir como:
+\begin{verbatim}
+	(define Y 
+		(lambda (f) 
+			((lambda (x) (f (lambda (v) ((x x) v)))) 
+				(lambda (x) (f (lambda (v) ((x x) v)))))))
+\end{verbatim}
+Con esto, la expresion se modifica de esta forma:
+\begin{verbatim}
+	(let ((Y (lambda (f)
+			((lambda (x) (f (lambda (v) ((x x) v))))
+			(lambda (x) (f (lambda (v) ((x x) v))))))))
+		(sum (lambda (g)
+			(lambda (n)
+				(if0 n 0 (+ n (g (- n 1)))))))
+	((Y sum) 5))
+\end{verbatim}
+
+\textbf{Sum} ahora no es una función directamente recursiva, sino una función que acepta como argumento otra función \textbf{g} que realizará la recursión.
+Esta función g es la que va a ser recursiva mediante el uso del combinador Y.
+
+\subsubsection*{Ejecución}
+La expresión \texttt{((Y sum) 5)} genera el cálculo de la suma de los números del 5 al 0:
+\begin{enumerate}
+	\item Se llama a \texttt{Y sum}, lo que convierte a \texttt{sum} en una función recursiva.
+	\item \texttt{sum 5} devuelve \(5 + \texttt{sum}(4)\).
+	\item \texttt{sum 4} devuelve \(4 + \texttt{sum}(3)\).
+	\item \texttt{sum 3} devuelve \(3 + \texttt{sum}(2)\).
+	\item \texttt{sum 2} devuelve \(2 + \texttt{sum}(1)\).
+	\item \texttt{sum 1} devuelve \(1 + \texttt{sum}(0)\).
+	\item \texttt{sum 0} devuelve 0.
+	\item Los resultados se acumulan: 
+	\[
+	5 + 4 + 3 + 2 + 1 + 0 = 15.
+	\]
+\end{enumerate}
